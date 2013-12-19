@@ -1,0 +1,24 @@
+﻿CustomerList
+1. Se till att webbadressen ser ut som den ska
+2. Refactorera
+3. Skriv en Querystring för att skicka till andra webparten.
+4. Ändra WebPartens namn som syns när man Lagt till den på sidan
+
+
+CustomerDetails
+1. Ta emot querystringen
+2. Skriv en Query o skicka till SP
+		En Caml Query. (Använd verktyget CamlQueryBuilder)
+3. Presentera resultatet
+4. Snygga till det
+5. Ändra WebPartens namn som syns när man Lagt till den på sidan
+
+
+- Kolla Bootstrap. Ska det implementeras för att göra allt snyggt???
+- Ev skapa en egen sida som man lägger till. Snygga i så fall till den med CSS osv.
+
+
+- DOKUMENTATION
+- Deploya med SPDM
+- Skicka med både wsp.filen (vias SPDM) och VS-Projektet i en zipfil
+

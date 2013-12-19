@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{58B18682-7123-4EBD-8264-A255E6A5F411}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EC.AndreasLef.Sharepoint.Projekt</RootNamespace>
+    <AssemblyName>EC.AndreasLef.Sharepoint.Projekt</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BB1F664B-9266-4fd6-B973-E1E44974B511};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <ActiveDeploymentConfiguration>Default</ActiveDeploymentConfiguration>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Security" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Artifacts\WebParts\CustomerDetails\CustomerDetails.cs" />
+    <Compile Include="Artifacts\WebParts\CustomerDetails\CustomerDetailsUserControl.ascx.cs">
+      <DependentUpon>CustomerDetailsUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Artifacts\WebParts\CustomerDetails\CustomerDetailsUserControl.ascx.designer.cs">
+      <DependentUpon>CustomerDetailsUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Artifacts\WebParts\CustomersList\CustomersList.cs" />
+    <Compile Include="Artifacts\WebParts\CustomersList\CustomersListUserControl.ascx.cs">
+      <DependentUpon>CustomersListUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Artifacts\WebParts\CustomersList\CustomersListUserControl.ascx.designer.cs">
+      <DependentUpon>CustomersListUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Code\Logger.cs" />
+    <Compile Include="Features\EC.AndreasLef.AddList\EC.AndreasLef.EventReceiver.cs">
+      <DependentUpon>EC.AndreasLef.AddList.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Artifacts\WebParts\CustomerDetails\CustomerDetails.webpart" />
+    <None Include="Artifacts\WebParts\CustomerDetails\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{128003a3-6687-4915-91bb-66e7bed79372}</SharePointProjectItemId>
+    </None>
+    <None Include="Artifacts\WebParts\CustomersList\CustomersList.webpart" />
+    <None Include="Artifacts\WebParts\CustomersList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{fd78574f-8777-412e-804d-4056b95edc8e}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\EC.AndreasLef.AddList\EC.AndreasLef.AddList.feature">
+      <FeatureId>{68df4f20-32ef-4601-a612-de58089442e9}</FeatureId>
+    </None>
+    <None Include="Features\EC.AndreasLef.AddWebParts\EC.AndreasLef.AddWebParts.feature">
+      <FeatureId>{fef4d227-6112-477d-8d61-d6cd2987ab68}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Package\Package.package">
+      <PackageId>{08106578-9eb8-4099-a622-20ae96d4d018}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Artifacts\WebParts\CustomerDetails\CustomerDetailsUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Artifacts\WebParts\CustomerDetails\Elements.xml" />
+    <Content Include="Artifacts\WebParts\CustomersList\CustomersListUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Artifacts\WebParts\CustomersList\Elements.xml" />
+    <Content Include="Features\EC.AndreasLef.AddList\EC.AndreasLef.AddList.Template.xml">
+      <DependentUpon>EC.AndreasLef.AddList.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\EC.AndreasLef.AddWebParts\EC.AndreasLef.AddWebParts.Template.xml">
+      <DependentUpon>EC.AndreasLef.AddWebParts.feature</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" />
+</Project>

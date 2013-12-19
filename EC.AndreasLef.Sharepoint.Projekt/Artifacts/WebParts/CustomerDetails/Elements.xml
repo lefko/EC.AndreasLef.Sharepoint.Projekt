@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/" >
+  <Module Name="CustomerDetails" List="113" Url="_catalogs/wp">
+    <File Path="CustomerDetails\CustomerDetails.webpart" Url="CustomerDetails.webpart" Type="GhostableInLibrary" >
+      <Property Name="Group" Value="EC.AndreasLef" />
+    </File>
+  </Module>
+</Elements>
